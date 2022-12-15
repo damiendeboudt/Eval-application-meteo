@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    text-align: center;
+    font-size: 3rem;
+}
+#container{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+#container > input{
+    margin-left: 1rem;
+    margin-right: 3rem;
+    border-radius: 1ch;
+    padding-left: 1rem;
+}
+#container >button{
+    background-color: white;
+    width: 5rem;
+    border-radius: 1ch;
+}
+#container2 {
+    display: flex;
+    font-size: 3rem;
+    justify-content: space-around;
+    margin-top: 4rem;
+    height: 40rem;
+}
+
+#vent, #Ciel, #temperature, #humidity {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    border: 1px solid black;
+    align-items: center;
+}
