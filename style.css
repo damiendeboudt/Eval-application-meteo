@@ -9,6 +9,8 @@ html{
 header{
     text-align: center;
     font-size: 3rem;
+    background-color: white;
+    border-bottom: 2px solid black;
 }
 #container{
     font-size: 3rem;
@@ -34,11 +36,52 @@ header{
     margin-top: 4rem;
     height: 40rem;
 }
+body{
+    background-color: steelblue;
+}
+h1{
+    color: black;
+}
 
 #vent, #Ciel, #temperature, #humidity {
     display: flex;
     flex-direction: column;
-    width: 35rem;
+    width: 27rem;
     border: 1px solid black;
     align-items: center;
+    border-radius: 1ch;
+    box-shadow: 3px 3px 3px black;
+    background-color: white;
+}
+
+@media screen and (max-width: 600px){
+    #container2{
+    display: flex;
+    flex-direction: column;
+    height: 100rem;
+    align-items: center;
+}
+    #vent, #Ciel, #temperature, #humidity {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        border: 1px solid black;
+        align-items: center;
+        border-radius: 1ch;
+        box-shadow: 3px 3px 3px black;
+        height: 20rem;
+        background-color: white;
+    }
+
+    body{
+        background-color: steelblue;
+        border-bottom: 2px solid black;
+    }
+    label{
+        color: white;
+        margin-left: 5px;
+    }
+    button{
+        margin-right: 5px;
+    }
 }
