@@ -1,3 +1,5 @@
+/*
+
 let myTown = document.getElementById("ville")
 let buttonSend = document.getElementById("send")
 
@@ -59,3 +61,41 @@ xhr.onload = function () {
 }
 xhr.send();
 })
+
+
+ */
+
+
+//!!!AVEC JQUERY!!!
+
+let  myTown = $('#ville');
+let buttonSend = $('#send');
+
+buttonSend.on('click', function () {
+    $.ajax( {
+        url: "https://api.openweathermap.org/data/2.5/weather?q=" + $(myTown).val() +"&appid=5386756" +
+            "6d2b5b0c4075fd5fc0c9c4614&units=metric&lang=fr",
+        method: "GET",
+        dataType: 'json'
+    })
+        .done(function (response){
+            console.log(response) //requête ok
+
+
+
+    let wind = response.wind
+        $('#vent').text("Vitesse du vent: " +
+            (wind.speed * 3.6).toFixed("2") + " km/h")
+
+    let weatherDescription = response.weather[0]
+        $('#Ciel').text("Ciel: " + weatherDescription.description)
+
+
+    let temperature = response.main
+        $('#temperature').text("Temperature: "  + temperature.temp + " °C")
+
+
+    let humidity = response.main
+        $('#humidity').text("Taux d'humidité: " + humidity.humidity + " %")
+
+})})
